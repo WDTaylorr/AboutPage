@@ -1,0 +1,133 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:#f1f5f8;
+  color:#102a42;
+}
+
+.page-title{
+  text-align:center;
+  margin: 3rem 0;
+}
+.page-title h1{
+  font-size:3rem;
+  margin:1rem 0 ;
+}
+
+/* About */
+#aboutImg{
+  width:500px;
+  object-fit: cover;
+  border-radius:10px;
+}
+
+section#about{
+  width:85vw;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  margin:0 2rem;
+  margin:auto;
+}
+.about-sections{
+  background:#fff;
+  border-radius:5px;
+}
+.about-content{
+  padding:1rem;
+}
+
+
+/* About Buttons */
+#about .buttons{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+#about .buttons > button{
+  padding:1rem;
+  border:none;
+  font-size:1rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition:0.2s ease-in-out;
+  outline:none;
+}
+
+.buttons > button:first-child{
+  border-top-left-radius: 5px;
+}
+
+.buttons > button:last-child{
+  border-top-right-radius: 5px;
+}
+
+
+/* Altered in javascript to show/hide elements */
+.invisible{
+  display:none;
+}
+.visible{
+  display:block;
+}
+.visibleBtn{
+  background:#fff;
+}
+.invisibleBtn{
+  background:#dae2ec;
+}
+.invisibleBtn:hover{
+  background:#d7e8fd;
+  color:#69adff;
+}
+
+
+/* About content */
+h3.about-title{
+  letter-spacing: 5px;
+  font-size:1rem;
+  padding:1rem 0 ;
+}
+
+p.about-desc{
+  font-size:1.1rem;
+  line-height: 1.6;
+  color:#8d8d9b;
+}
+
+
+@media(max-width:1170px){
+  #aboutImg{
+    width:100%;
+    height:300px;
+    border-radius:  10px 10px 0 0;
+  }
+
+  .buttons > button{
+    border-radius:0;
+  }
+  
+  section#about{
+    width:90vw;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:700px){
+  .page-title{
+    margin: 1rem 0;
+  }
+  .page-title h1{
+    font-size:2.5rem;
+    margin:0.5rem 0 ;
+  }
+  h3.about-title{
+    text-align:center;
+  }
+  #aboutImg{
+    height:250px;
+  }
+}
